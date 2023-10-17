@@ -43,9 +43,6 @@ def display_order_details():
 
     for cu in customers:
         print(cu)
-    print("\n")
-    for order_details in customers: 
-        print(order_details)
         
 while True : 
 
