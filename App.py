@@ -7,7 +7,7 @@ class Customer :
         self.Address = Address
     
     def __str__(self):
-        return f"Name: {self.Name} \nEmail: {self.Email} \nAddress:{self.Address}"
+        return f"\nName: {self.Name} \nEmail: {self.Email} \nAddress:{self.Address}"
                 
 class Pizza :
 
@@ -23,5 +23,5 @@ class Pizza :
         return total_price
 
     def __str__(self):
-        return f"Size: {self.size} \nPrice: ${self.price} \nQuantity: {self.number_of_pizza} \nTotal Price: {self.total()} "
+        return f"\nSize: {self.size} \nPrice: ${self.price} \nQuantity: {self.number_of_pizza} \nTotal Price: {self.total()} "
     
