@@ -1,19 +1,15 @@
 from App import Customer , Pizza
 
 customers = [ ]
-orders = [ ]
 pizza_price_List = [ 10 , 12 , 15 , 18 ]
 
 def customer_Info():
 
     name = input("Enter your name: ")
-    Email = input("Enter your email: ")
-    Address = input("Enter your address: ")
     
-    cu = Customer(name , Email , Address)
-    customers.append(cu)
-
-def pizza_Info():
+    Email = input("Enter your email: ")
+    
+    Address = input("Enter your address: ")
     
     size = input("Enter pizza size (Small, Medium, Large, X-Large): ")
 
@@ -34,9 +30,12 @@ def pizza_Info():
     price = cost        
 
     number_of_pizza = int(input("Enter the quantity: "))
+
+    cu = Customer(name , Email , Address)
+    customers.append(cu)
     
     pI = Pizza(size , price , number_of_pizza)
-    orders.append(pI)
+    customers.append(pI)
     
 def display_order_details():
 
@@ -44,17 +43,16 @@ def display_order_details():
 
     for cu in customers:
         print(cu)
-        print("\n")
-    for order_details in orders: 
+    print("\n")
+    for order_details in customers: 
         print(order_details)
         
 while True : 
 
     print("\nSelect an option\n")
     print ("1 to Enter Customer Details\n")
-    print ("2 to Enter Order\n")
-    print ("3 to Display order details and Total Price\n")
-    print ("4 to Exit\n")
+    print ("2 to Display order details and Total Price\n")
+    print ("3 to Exit\n")
     
     x = input("==>")
 
@@ -62,12 +60,9 @@ while True :
         customer_Info()
 
     elif x == "2":
-        pizza_Info()
-
-    elif x == "3":
         display_order_details()
 
-    elif x == "4":
+    elif x == "3":
         print("Thanks For Ordering")
         break    
     
